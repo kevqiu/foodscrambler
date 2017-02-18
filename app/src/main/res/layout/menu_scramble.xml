@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true"
+    tools:context="com.kq.foodscrambler.SelectMenu">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/touch"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.kq.foodscrambler.SelectMenu"
+        tools:showIn="@layout/restaurant_scramble">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp">
+            <Button
+                style="?android:attr/buttonStyle"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="Add Item"
+                android:textColor="@color/white"
+                android:id="@+id/addButton"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_column="60"
+                android:layout_alignTop="@+id/scrambleButton"
+                android:layout_toRightOf="@+id/aligner"
+                android:layout_toEndOf="@+id/aligner"/>
+
+            <Button
+                style="?android:attr/buttonStyle"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="Scramble!"
+                android:textColor="@color/white"
+                android:id="@+id/scrambleButton"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/aligner"
+                android:layout_toStartOf="@+id/aligner"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=" "
+                android:id="@+id/aligner"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Add more menu items!"
+                android:textColor="@color/white"
+                android:typeface="sans"
+                android:id="@+id/addMoreText"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="75dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_gravity="center_horizontal">
+
+               <ListView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/foodList"
+                   android:background="@drawable/list_border"
+                   android:elevation="4dp"
+                   android:layout_alignParentTop="true"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="0dp"
+                   android:layout_margin="5dp"/>
+           </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

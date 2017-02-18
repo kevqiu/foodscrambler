@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FoodScrambler</string>
+    <string name="app_name_wrappable">Food Scrambler</string>
+    <string name="action_settings">Settings</string>
+</resources>
